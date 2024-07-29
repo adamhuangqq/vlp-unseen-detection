@@ -1,0 +1,37 @@
+tips：
+需要在远程服务器上上传，应该是外网连不上的问题
+安装git可直接上网查询，几个命令，很简单
+apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+apt-get install git
+装不上的话需要更新apt-get
+steps：
+1、进入相应的文件夹，git init
+2、git remote add <远程主机名（可自定义名称，常用origin）>https://gitlab.dev-cd.eccom.com.cn/di/ai/in/in/shjd-study/multimodalobjectdetection.git 
+3、git pull <远程主机名> <远程分支名>:<本地分支名>把远程分支的内容与本地分支合并（这时会需要输入用户名和密码）
+4、git add . (把本地分支的所有文件添加到缓存区)
+5、git commit -m "备注" (添加备注)
+6、git push <远程主机名> <远程分支名>:<本地分支名> 把本地分支的内容全部传到远程分支
+其他指令：
+git branch -a(查看本地分支和远程分支)
+git config：配置信息
+	git config --global user.name '你的用户名'
+	git config --global user.email '你的邮箱'
+git add：添加文件到缓存命令
+git status：查看文件的状态命令
+git diff：查看更新的详细信息命令
+git commit：提交命令
+git reset HEAD：取消缓存命令
+git rm：删除命令
+git mv：移动或重命名命令
+本地分支命令
+git branch：查看分支命令
+git branch (branchname)：创建分支命令
+git checkout (branchname)：切换分支命令
+git merge：合并分支命令
+git branch -d (branchname)：删除分支命令
+远程仓库
+git remote add：添加远程仓库
+git remote：查看当前的远程仓库
+git fetch、git pull：提取远程仓仓库
+git push：推送到远程仓库
+git remote rm：删除远程仓库
